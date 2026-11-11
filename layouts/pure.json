@@ -1,0 +1,126 @@
+{
+  "id": "root",
+  "type": "row",
+  "titlebar": "none",
+  "background": "canvas",
+  "preview": "layouts/pure.svg",
+  "children": [
+    {
+      "id": "sidebar",
+      "type": "column",
+      "size": {
+        "px": 268
+      },
+      "min": 44,
+      "max": 480,
+      "background": "chrome",
+      "resizable": false,
+      "children": [
+        {
+          "id": "brand",
+          "type": "block",
+          "size": {
+            "px": 46
+          },
+          "window_drag": true,
+          "content": {
+            "mod": "workspace-chrome"
+          }
+        },
+        {
+          "id": "sidebar-lists",
+          "type": "column",
+          "children": [
+            {
+              "id": "spaces",
+              "type": "block",
+              "size": {
+                "weight": 1
+              },
+              "min": 90,
+              "content": {
+                "mod": "spaces"
+              }
+            },
+            {
+              "id": "agents",
+              "type": "block",
+              "size": {
+                "weight": 1
+              },
+              "min": 90,
+              "content": {
+                "mod": "agents"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sidebar-footer",
+          "type": "block",
+          "size": {
+            "px": 69
+          },
+          "content": {
+            "mod": "workspace-chrome",
+            "props": {
+              "footer": true
+            }
+          }
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "work",
+      "type": "column",
+      "resizable": false,
+      "children": [
+        {
+          "id": "bar",
+          "type": "block",
+          "size": {
+            "px": 30
+          },
+          "window_drag": true,
+          "content": {
+            "mod": "pure-bar"
+          }
+        },
+        {
+          "id": "main",
+          "type": "block",
+          "padding": [
+            8,
+            10
+          ],
+          "content": {
+            "tab": "active",
+            "pane": {
+              "header": {
+                "content": {
+                  "mod": "pane"
+                },
+                "height": 30,
+                "position": "top",
+                "reveal": "always"
+              },
+              "background": "background",
+              "border": {
+                "width": 1,
+                "color": "border"
+              },
+              "focus": {
+                "width": 1,
+                "color": "accent"
+              },
+              "radius": 10,
+              "gap": 8,
+              "lone": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
